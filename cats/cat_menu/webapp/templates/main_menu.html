@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/" method="post">
+    {% csrf_token %}
+    <img src="{% static '{{ img }}' %}" alt="cat_pict" />
+    <p>Name - {{ name }}</p>
+    <p>Age - {{ age }}</p>
+    <p>Mood - {{ mood }}</p>
+    <p>Hunger - {{ food }}</p>
+    <label>
+        <select name="action">
+            <option value="feed">Feed</option>
+            <option value="play">Play</option>
+            <option value="change_state">Wake up / Send to sleep</option>
+        </select>
+    </label>
+<input type="submit" value="Submit!"/>
+</form>
+
+</body>
+</html>

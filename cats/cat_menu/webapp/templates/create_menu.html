@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/" method="post">
+    {% csrf_token %}
+    <p style="text-align:center">Welcome to cat simulator<br>Please enter the name of a new cat</p>
+    <label style="text-align:center"><input type="text" name="name" /></label>
+    <input style="text-align:center" type="submit" value="Submit!"/>
+</form>
+</body>
+</html>
